@@ -21,6 +21,10 @@ test('All Operations', async ({ page }) => {
 
   // Fuel Operations //
   await page.locator('#mapMaint > img').first().click();
+  
+  // Take a screenshot after clicking the element
+  await page.screenshot({ path: 'screenshot_after_click.png', fullPage: true });
+
   await fuelUtils.buyFuel();
 
   await page.getByRole('button', { name: ' Co2' }).click();
@@ -35,7 +39,7 @@ test('All Operations', async ({ page }) => {
   await campaignUtils.createCampaign();
 
   await page.locator('#popup > .modal-dialog > .modal-content > .modal-header > div > .glyphicons').click();
-  await GeneralUtils.sleep(1000)
+  await GeneralUtils.sleep(1000);
   // End //
 
   // Repair Planes if needed //
