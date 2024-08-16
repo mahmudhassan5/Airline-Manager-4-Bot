@@ -19,11 +19,13 @@ test('All Operations', async ({ page }) => {
   // Login //
   await generalUtils.login(page);
 
+  await page.screenshot({ path: 'screenshot_after_click.png', fullPage: true });
+
   // Fuel Operations //
   await page.locator('#mapMaint > img').first().click();
   
   // Take a screenshot after clicking the element
-  await page.screenshot({ path: 'screenshot_after_click.png', fullPage: true });
+  await page.screenshot({ path: 'screenshot_after_click2.png', fullPage: true });
 
   await fuelUtils.buyFuel();
 
