@@ -22,7 +22,7 @@ export class GeneralUtils {
 
         await page.goto('https://www.airlinemanager.com/');
 
-        await page.getByRole('button', { name: 'Login to Airline Manager 4' }).click();
+       // await page.getByRole('button', { name: 'Login to Airline Manager 4' }).click();
         await page.locator('#lEmail').click();
         await page.locator('#lEmail').fill(this.username);
         await page.locator('#lEmail').press('Tab');
