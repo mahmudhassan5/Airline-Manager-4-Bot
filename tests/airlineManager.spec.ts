@@ -37,8 +37,8 @@ test('All Operations', async ({ page }) => {
   //await page.locator('div:nth-child(5) > #mapMaint > img').click();
   //await campaignUtils.createCampaign();
 
-  await page.locator('#popup > .modal-dialog > .modal-content > .modal-header > div > .glyphicons').click();
-  await GeneralUtils.sleep(1000);
+  //await page.locator('#popup > .modal-dialog > .modal-content > .modal-header > div > .glyphicons').click();
+  //await GeneralUtils.sleep(1000);
   // End //
 
   // Repair Planes if needed //
